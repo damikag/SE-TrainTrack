@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../assets/vendor/datepicker/tempusdominus-bootstrap-4.css" />
+    <link rel="stylesheet" href="../assets/vendor/inputmask/css/inputmask.css" />
+</head>
+
+<body>
+    
+<div class="dashboard-header">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <a class="navbar-brand" href="../index.html">iTrack</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto navbar-right-top">
+                <li class="nav-item">
+                    <div id="custom-search" class="top-search-bar">
+                        <input class="form-control" type="text" placeholder="Search..">
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+</div>
+    <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item table">
+                                <a href="/data-tables" class="nav-link"  ><i class="fas fa-fw fa-table"></i>View Train Journey</a>
+                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/new-train-journey"  aria-expanded="false"  ><i class="fab fa-fw fa-wpforms"></i>Add New Train Journey</a>
+                                
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+                </nav>
+            </div>
+        </div>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+    
+        <div class="dashboard-wrapper">
+            <div class="container-fluid dashboard-content">
+                <div class="row">
+                    <div class="col-xl-10">
+                        <!-- ============================================================== -->
+                        <!-- pageheader  -->
+                        <!-- ============================================================== -->
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="page-header" id="top">
+                                    <h2 class="pageheader-title">Update Train Journey</h2>
+                                    <p class="pageheader-text"></p>
+                                    <div class="page-breadcrumb">
+                                        <nav aria-label="breadcrumb">
+                                           
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end pageheader  -->
+                        <!-- ============================================================== -->
+                        
+                        <!-- ============================================================== -->
+                        <!-- basic form  -->
+                        <!-- ============================================================== -->
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="section-block" id="basicform">
+                                    <h3 class="section-title">Update Train Journey Details</h3>
+                                    <!-- <p>follow given example when adding train time</p> -->
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="Journey_ID" class="col-form-label">Journey ID</label>
+                                                <input id="Journey_ID" type="text" value="0001" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Train_ID" class="col-form-label">Train ID</label>
+                                                <input id="Train_ID" type="text" value="0001" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Start_Time" class="col-form-label">Start Time</label>
+                                                <input id="Start_Time" type="text" value="17:00" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="End_Time" class="col-form-label">End Time</label>
+                                                <input id="End_Time" type="text" value="17:00" class="form-control">
+                                            </div>
+                        <!-- edit Start Station -->
+                                            <div class="form-group">
+                                                <label for="Start_Station">Start Station</label>
+                                                <select class="form-control" id="Start_Station">
+                                                    <option></option>
+                                                    <option>Colombo_Fort</option>
+                                                    <option>Kurunegala</option>
+                                                    <option>Gampaha</option>
+                                                </select>
+                                            </div>
+                        <!-- edit End Station -->
+                                            <div class="form-group">
+                                                <label for="End_Station">End Station</label>
+                                                <select class="form-control" id="End_Station">
+                                                    <option></option>
+                                                    <option>Colombo_Fort</option>
+                                                    <option>Kurunegala</option>
+                                                    <option>Gampaha</option>
+                                                </select>
+                                            </div>
+
+                    <!-- edit intermediate stations -->
+                                <div class="control-group">
+                                        <div class="row">
+                                            <label class="col-md-4">Arrival to Intermediate Stations</label>
+                                            <div class="col-md-1"></div>
+                                            <i class="fa fa-plus col-md-4" style="color: #000;padding-left: 30px;" aria-hidden="true"></i>
+                                            <div class="col-md-3"></div>
+                                        </div>
+                                        
+                                        <div class="row id-1">
+                                            <!-- station name -->
+                                            <div class="form-group col-lg-2">
+                                            <select class="form-control" id="type-1" name="intermetiate_station[]" style="width: 150px;height: 38.5px; font-size: 14px;">
+                                                <option></option>
+                                                <option>Colombo Fort</option>
+                                                <option>Kurunegala</option>
+                                                <option>Gampaha</option>
+                                            </select>
+                                            </div>
+
+                                            <div class="col-lg-1"></div>
+                                            
+                                            <!-- arrival time -->
+                                            <input type='text' name="arrival_time[]" value="" class="form-control col-lg-2" placeholder="ex: 17:00" data-rules="required" style="width:181px;padding: 5px 10px;border-right-width:10px;"/>
+
+
+                                            <div class="col-lg-6"></div>
+
+                                        </div>
+
+                                        <div id="id-1"></div>
+                                                        
+                                    </div>
+                                 </form>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                                
+                                <div class="col-sm-6 pl-0">
+                                    <p class="text-right">
+                                        <button onclick="updateDB()" class="btn btn-space btn-primary">Update</button>
+                                        <button class="btn btn-space btn-secondary">Cancel</button>
+                                    </p>
+                                </div>
+                            </div>
+                        <!-- ============================================================== -->
+                        <!-- end basic form  -->
+                        <!-- ============================================================== -->
+    
+               
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper -->
+    <!-- ============================================================== -->
+
+        <!-- js for intermetiate stations -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+                $(document).ready(function(){
+
+
+                    var id=1;
+                    var cl=2;
+                    $('.fa-plus').on('click',function(){
+
+                        $('#id-'+id).addClass('row');
+
+
+                        $('#id-'+id).addClass('id-'+cl);
+                        
+
+                        // console.log($('#id-'+id));
+                        //intermetiate_station[] and arrival_time[] 
+                        var divTag='<div class="form-group col-lg-2"><select class="form-control"  name="intermetiate_station[]" style="width: 150px;height: 38.5px;"><option></option><option>Colombo Fort</option><option>Kurunegala</option><option>Gampaha</option></select></div><div class="col-lg-1"></div><input type="text" name="arrival_time[]" value="" class="form-control col-lg-2" data-rules="required" style="width:181px;padding: 5px 10px;border-right-width:10px;"/><button type="button" class="close col-lg-1 btn-id" aria-label="Close"><span aria-hidden="true">&times;</span></button><div class="col-lg-6"></div>';
+
+                        $('#id-'+id).html(divTag);
+                        id++;
+
+                        $('.id-'+cl).after('<div id="id-'+id+'"></div>');
+                        cl++;
+
+                        $('.btn-id').on('click',function(){
+                            $(this).parent().remove();
+                        });
+
+
+                    });
+
+                });
+
+        </script>
+
+
+    <!-- Optional JavaScript -->
+    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="../assets/libs/js/main-js.js"></script>
+    <script src="../assets/vendor/inputmask/js/jquery.inputmask.bundle.js"></script>
+    <script>
+    $(function(e) {
+        "use strict";
+        $(".date-inputmask").inputmask("dd/mm/yyyy"),
+            $(".phone-inputmask").inputmask("(999) 999-9999"),
+            $(".international-inputmask").inputmask("+9(999)999-9999"),
+            $(".xphone-inputmask").inputmask("(999) 999-9999 / x999999"),
+            $(".purchase-inputmask").inputmask("aaaa 9999-****"),
+            $(".cc-inputmask").inputmask("9999 9999 9999 9999"),
+            $(".ssn-inputmask").inputmask("999-99-9999"),
+            $(".isbn-inputmask").inputmask("999-99-999-9999-9"),
+            $(".currency-inputmask").inputmask("$9999"),
+            $(".percentage-inputmask").inputmask("99%"),
+            $(".decimal-inputmask").inputmask({
+                alias: "decimal",
+                radixPoint: "."
+            }),
+
+            $(".email-inputmask").inputmask({
+                mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[*{2,6}][*{1,2}].*{1,}[.*{2,6}][.*{1,2}]",
+                greedy: !1,
+                onBeforePaste: function(n, a) {
+                    return (e = e.toLowerCase()).replace("mailto:", "")
+                },
+                definitions: {
+                    "*": {
+                        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~/-]",
+                        cardinality: 1,
+                        casing: "lower"
+                    }
+                }
+            })
+    });
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+<script src="../assets/libs/js/updateJourney.js"></script>
+
+</body>
+ 
+</html>
